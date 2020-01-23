@@ -5,16 +5,18 @@ def clic(x, y):
 		if y > (button_start.ycor() - 25) and y < (button_start.ycor() + 25):
 			button_start.clear()
 			red_circle = turtle.Turtle()
+			red_circle.color('red')
 			red_circle.shape('circle')
 			red_circle.shapesize(7)
-			red_circle.color('red')
 
-	if (попал):
-		закрыть		
+	if x > (button_exit.xcor() - 50) and x < (button_exit.xcor() + 50):
+		if y > (button_exit.ycor() - 25) and y < (button_exit.ycor() + 25):
+			quit()	
 
 button_exit = turtle.Turtle()
 button_exit.ht()
 button_exit.up()
+button_exit.speed(0)
 button_exit.setposition(-200, -200)
 button_exit.down()
 button_exit.forward(100)
@@ -29,10 +31,12 @@ button_exit.left(90)
 button_exit.up()
 button_exit.setposition(-185, -195)
 button_exit.write('EXIT', font = ('Arial', 24, 'normal'))
+button_exit.setposition(-150, -175)
 
 button_start = turtle.Turtle()
 button_start.ht()
 button_start.up()
+button_start.speed(0)
 button_start.setposition(-75, 0)
 button_start.down()
 button_start.begin_fill()
